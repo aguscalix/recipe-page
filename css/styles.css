@@ -1,0 +1,194 @@
+:root {
+
+    /* BODY */
+    --papayawhip: #ffefd5;
+
+    /* PRIMARIOS */
+    --nutmeg: hsl(14, 45%, 36%);
+    --darkRaspberry: hsl(332, 51%, 32%);
+
+    /* NEUTRAL */
+    --white: hsl(0, 0%, 100%);
+    --roseWhite: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --lightGrey: hsl(30, 18%, 87%);
+    --wengeBrown: hsl(30, 10%, 34%);
+    --darkCharcoal: hsl(24, 5%, 18%);
+
+    /* FUENTES */
+    --texto:"Outfit", sans-serif;
+    --titulos: "Young Serif", serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* MANTIENE EL TAMAÑO */
+}
+
+/* MANTIENE EL TAMAÑO */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: var(--papayawhip);
+    font-size: 16px; /* 1rem = 10px */
+    font-family: var(--texto);
+    color: var(--wengeBrown);
+}
+
+h1,
+h2 {
+    font-family: var(--titulos);
+    color: #000;
+}
+
+h2 {
+    color: var(--nutmeg);
+}
+
+ul,
+ol {
+    margin-top: 0;
+    padding: 0rem 2rem;
+}
+
+ul  p,
+ol  p {
+    margin-left: 2rem;
+}
+
+hr {
+   height: .1rem;
+   border: none;
+   background-color: var(--lightGrey);
+   margin: 3rem 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    margin-top: 10rem;
+    padding: 3rem;
+}
+
+/* @media (max-width: 768px) {
+    .container {
+        width: 80%;
+
+    }
+    
+} */
+
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+
+    }
+    
+}
+
+.header {
+    margin-bottom: 3rem;
+
+}
+
+.header img {
+    max-width: 100%;
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: unset;
+        margin: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    .header img{
+        border-radius: unset;
+    }
+
+    .descripcion,
+    .preparacion,
+    .ingredientes,
+    .instrucciones,
+    .nutricion {
+        padding: 0 1.5rem;
+    }
+}
+
+.preparacion {
+    background-color: var(--roseWhite);
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    /* line-height: 2; */
+    margin: 3rem 0;
+}
+
+.preparacion h3 {
+    color: var(--darkRaspberry);
+    margin-bottom: 0;
+}
+
+.preparacion li::marker {
+    color: var(--darkRaspberry);
+    font-size: smaller;
+
+}
+
+.preparacion span {
+    font-weight: 700;
+}
+
+.ingredientes li::marker {
+    color: var(--nutmeg);
+    font-size: smaller;
+}
+
+.instrucciones span {
+    font-weight: 700;
+}
+
+.instrucciones li::marker {
+    color: var(--nutmeg);
+    font-family: var(--texto);
+    font-weight: 600;
+}
+
+.nutricion p {
+    background-color: var(--white);
+    margin: 0;
+    padding-bottom: 1.5rem;
+   
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--lightGrey);
+    row-gap: .1rem;
+}
+
+.table p {
+    padding: 1.5rem 3rem;
+
+}
+
+.nutricion span{
+    font-weight: 700;
+    color: var(--nutmeg);
+}
+
+
+
+
+
+
+
